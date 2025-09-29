@@ -30,4 +30,24 @@ async function searchUser(){
 const username = searchInput.value.trim();
 
 if(!username) return alert("please enter a username");
+
+try{
+
+    profileContainer.classList.add("hidden");
+    errorContainer.classList.add("hidden");
+
+    // https://api.github.com/users/krishna7275
+    const response = await fetch(`https://api.github.com/users/${username}`);
+    if(!response.ok) throw new Error("User not found");
+
+    const userData = await response.json();
+    console.log("user data is here",userData);
+}catch(error){
+ showError();
+}
+}
+
+function showError() {
+    errorContainer.classList.remove("hidden");
+    profileContainer.classList.add("hidden");
 }
