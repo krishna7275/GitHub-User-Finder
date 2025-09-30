@@ -91,11 +91,12 @@ button:hover {
     padding: 25px;
     box-shadow: var(--shadow-md);
     margin-bottom: 20px;
+    margin-top: 25px;
 }
 .profile-header {
     display: flex;
     align-items: flex-start;
-    grid-area: 25px;
+    gap: 25px;
     margin-bottom: 25px;
 }
 #avatar {
