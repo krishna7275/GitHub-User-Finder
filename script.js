@@ -131,7 +131,7 @@ function displayUserData(user) {
     blogElement.textContent = "No website";
     blogElement.href = "#";
   }
-
+  
   blogContainer.style.display = "flex";
 
   if (user.twitter_username) {
